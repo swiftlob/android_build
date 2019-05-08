@@ -655,8 +655,8 @@ function lunch()
         return 1
     fi
 
-    if (echo -n $product | grep -q -e "^omni_") ; then
-       CUSTOM_BUILD=$(echo -n $product | sed -e 's/^omni_//g')
+    if (echo -n $product | grep -q -e "^omniverse_") ; then
+       CUSTOM_BUILD=$(echo -n $product | sed -e 's/^omniverse_//g')
     else
        CUSTOM_BUILD=
     fi
