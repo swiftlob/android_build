@@ -208,14 +208,14 @@ function setpaths()
     local ARCH=$(get_build_var TARGET_ARCH)
     local toolchaindir toolchaindir2=
     case $ARCH in
-        x86) toolchaindir=x86/x86_64-linux-android-$targetgccversion/bin
+        x86) toolchaindir=x86/x86_64-linux-gnu/bin
             ;;
-        x86_64) toolchaindir=x86/x86_64-linux-android-$targetgccversion/bin
+        x86_64) toolchaindir=x86/x86_64-linux-gnu/bin
             ;;
-        arm) toolchaindir=arm/arm-linux-androideabi-$targetgccversion/bin
+        arm) toolchaindir=arm/arm-linux-gnueabi/bin
             ;;
-        arm64) toolchaindir=aarch64/aarch64-linux-android-$targetgccversion/bin;
-               toolchaindir2=arm/arm-linux-androideabi-$targetgccversion2/bin
+        arm64) toolchaindir=aarch64/aarch64-linux-gnu/bin;
+               toolchaindir2=arm/arm-linux-gnueabi/bin
             ;;
         mips|mips64) toolchaindir=mips/mips64el-linux-android-$targetgccversion/bin
             ;;
